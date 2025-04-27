@@ -8,7 +8,7 @@
         document.getElementById('currentYear').textContent = now.getFullYear();
         
         // Set child's name (replace with your name)
-        document.getElementById('childName').textContent = '[Your Name]';
+        document.getElementById('childName').textContent = 'Ha-re-Ram';
         
         // Music toggle
         const musicToggle = document.getElementById('musicToggle');
