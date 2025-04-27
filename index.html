@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mother's Day, Mom!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="relative overflow-x-hidden">
+    <!-- Floating flowers background -->
+    <div class="floating-flowers" id="flowers-container"></div>
+
+    <!-- Music player (hidden by default) -->
+    <audio id="bgMusic" loop>
+        <source src="/Assests/Music/meri_maa.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header with music control -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="text-xl font-bold text-pink-600">
+                Mother's Day <span id="currentDate"></span>
+            </div>
+            <button id="musicToggle"
+                class="bg-pink-100 hover:bg-pink-200 text-pink-600 p-3 rounded-full shadow-md transition-all duration-300">
+                <i class="fas fa-music text-xl"></i>
+                <span class="music-note absolute -top-1 -right-1 text-xs">♪</span>
+                <span class="music-note absolute -top-2 right-2 text-xs" style="animation-delay: 0.5s;">♪</span>
+            </button>
+        </header>
+
+        <!-- Main content -->
+        <main class="text-center">
+            <!-- Animated title -->
+            <div class="mb-12">
+                <h1 class="title text-5xl md:text-6xl font-bold text-pink-600 mb-4 pulse">
+                    Happy Mother's Day, Mom! <i class="fas fa-heart text-red-500 heart-beat"></i>
+                </h1>
+                <p class="text-lg text-pink-500">You're the most beautiful flower in my garden of life</p>
+            </div>
+
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-pink-600 mb-8">My Favorite Memories With You</h2>
+            
+                <!-- Adjusted 2x2 Grid layout with better image dimensions -->
+                <div class="grid grid-cols-2 gap-6">
+                    <!-- Photo 1 -->
+                    <div class="gallery-item photo-frame rounded-lg overflow-hidden bg-white p-2">
+                        <img src="/Assests/Pictures/1.jpg" alt="Mom smiling"
+                            class="w-full h-72 object-cover object-center rounded-md">
+                        <p class="text-center mt-2 text-gray-600">Mom's beautiful smile</p>
+                    </div>
+                    <!-- Photo 2 -->
+                    <div class="gallery-item photo-frame rounded-lg overflow-hidden bg-white p-2">
+                        <img src="/Assests/Pictures/2.jpg" alt="Mom Praying"
+                            class="w-full h-72 object-cover object-center rounded-md">
+                        <p class="text-center mt-2 text-gray-600">Mom's Prayers</p>
+                    </div>
+                    <!-- Photo 3 -->
+                    <div class="gallery-item photo-frame rounded-lg overflow-hidden bg-white p-2">
+                        <img src="/Assests/Pictures/4.jpg" alt="Mom laughing"
+                            class="w-full h-72 object-cover object-center rounded-md">
+                        <p class="text-center mt-2 text-gray-600">Joyful moments</p>
+                    </div>
+                    <!-- Photo 4 -->
+                    <div class="gallery-item photo-frame rounded-lg overflow-hidden bg-white p-2">
+                        <img src="/Assests/Pictures/3.jpg" alt="Mom with dad"
+                            class="w-full h-72 object-cover object-center rounded-md">
+                        <p class="text-center mt-2 text-gray-600">Laughter is the best medicine</p>
+                    </div>
+                </div>
+            </div>
+                            
+
+            <!-- Heartfelt message -->
+            <div class="message-box max-w-3xl mx-auto p-8 rounded-xl mb-16 relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-pink-200 rounded-full opacity-20"></div>
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-300 rounded-full opacity-20"></div>
+
+                <h2 class="text-3xl font-bold text-pink-600 mb-6">Dear Mom,</h2>
+                <div class="message-text text-lg text-gray-700 leading-relaxed text-left space-y-4">
+                    <p>On this special day, I want to take a moment to thank you for everything you've done for me. Your
+                        love has been my guiding light, your wisdom my compass, and your hugs my safe haven.</p>
+
+                    <p>Looking through these photos reminds me of all the beautiful moments we've shared - from my first
+                        steps to my proudest achievements, you've been there cheering me on. Your sacrifices, your
+                        patience, and your endless love have shaped me into who I am today.</p>
+
+                    <p>No words can truly express how grateful I am to have you as my mother. You're my first friend, my
+                        forever hero, and my greatest blessing. I hope you know how much you mean to me.</p>
+
+                    <p class="text-center text-xl text-pink-600 font-bold mt-6">Wishing you the most wonderful Mother's
+                        Day!</p>
+
+                    <p class="text-right font-bold text-pink-600">With all my love,<br>Your <span
+                            id="childName">Child</span></p>
+                </div>
+            </div>
+
+            <!-- Special memories -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-pink-600 mb-8">Why You're The Best Mom</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="memory-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-utensils flower"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Your Nourishing Meals</h3>
+                        <p class="text-gray-600">No one cooks like you do! Your food is always made with extra love.</p>
+                    </div>
+
+                    <div class="memory-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-hands-helping flower" style="animation-delay: 0.5s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Your Endless Support</h3>
+                        <p class="text-gray-600">You've always believed in me, even when I didn't believe in myself.</p>
+                    </div>
+
+                    <div class="memory-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-heart flower" style="animation-delay: 1s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Your Unconditional Love</h3>
+                        <p class="text-gray-600">No matter what, I know your love for me will never change.</p>
+                    </div>
+
+                    <!-- New Card -->
+                    <div class="memory-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-gem flower" style="animation-delay: 1.5s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Your Everlasting Wisdom</h3>
+                        <p class="text-gray-600">You've taught me so many lessons that have shaped who I am today.</p>
+                    </div>
+
+                    <!-- New Card 2 -->
+                    <div class="memory-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-smile-beam flower" style="animation-delay: 2s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Your Infectious Laughter</h3>
+                        <p class="text-gray-600">Your laughter fills every room with warmth and joy. It’s truly
+                            contagious!</p>
+                    </div>
+
+                    <!-- New Card 3 -->
+                    <div class="memory-card bg-white p-6 rounded-xl shadow-md">
+                        <div class="text-pink-500 text-4xl mb-4">
+                            <i class="fas fa-umbrella flower" style="animation-delay: 2.5s;"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Your Protective Care</h3>
+                        <p class="text-gray-600">You’ve always been my shield, keeping me safe and helping me grow with
+                            love.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive love meter -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-pink-600 mb-6">How Much Do I Love You?</h2>
+                <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6">
+                    <div class="relative h-8 bg-gray-200 rounded-full mb-4 overflow-hidden">
+                        <div id="loveMeter"
+                            class="absolute top-0 left-0 h-full bg-gradient-to-r from-pink-400 to-red-500 rounded-full transition-all duration-1000"
+                            style="width: 0%"></div>
+                    </div>
+                    <button id="measureLove" class="btn-primary text-white font-bold py-3 px-8 rounded-full">
+                        Measure My Love <i class="fas fa-heart ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Virtual hug -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-pink-600 mb-6">Sending You a Big Hug!</h2>
+                <button id="sendHug"
+                    class="relative bg-pink-100 hover:bg-pink-200 text-pink-600 font-bold py-4 px-8 rounded-full shadow-md transition-all duration-300">
+                    <i class="fas fa-people-arrows text-3xl mr-2"></i> Click Here for a Virtual Hug
+                    <span id="hugCounter"
+                        class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center">0</span>
+                </button>
+                <p id="hugMessage" class="mt-4 text-pink-500 hidden">Hug sent! <i class="fas fa-heart text-red-500"></i>
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 text-pink-500">
+            <p>Made with <i class="fas fa-heart text-red-500"></i> for the world's best mom</p>
+            <p class="text-sm mt-2">© <span id="currentYear"></span> - Your Loving Child ~ <b>Ha-re-Ram</b></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
